@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protek - Proteção que Acompanha Cada Objetivo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0a0a0a', /* Deepest premium black */
+                            card: '#121212', /* Sleek charcoal card background */
+                            cardLight: '#1a1a1a',
+                            accent: '#f2a900', /* True Safety Construction Yellow */
+                            accentHover: '#d49400',
+                            border: '#262626',
+                            textMuted: '#a3a3a3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+        }
+        /* Custom scrollbar to match industrial premium aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f2a900;
+        }
+    </style>
+</head>
+<body class="text-neutral-200 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Nav -->
+    <header class="border-b border-brand-border sticky top-0 bg-[#0a0a0af5] backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo Group -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center font-black text-black text-xl shadow-lg shadow-brand-accent/20">
+                    P
+                    <div class="absolute -bottom-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-brand-bg"></div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-wider text-white leading-none">PRO<span class="text-brand-accent">TEK</span></span>
+                    <span class="text-[9px] text-brand-textMuted tracking-widest uppercase font-bold mt-0.5">Tecnologia Ativa</span>
+                </div>
+            </a>
+            
+            <!-- Navigation links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-brand-textMuted">
+                <a href="#inicio" class="hover:text-brand-accent transition-colors">Início</a>
+                <a href="#quem-somos" class="hover:text-brand-accent transition-colors">Quem Somos</a>
+                <a href="#acidentes" class="hover:text-brand-accent transition-colors">Dados & Acidentes</a>
+                <a href="#tecnologia" class="hover:text-brand-accent transition-colors">Tecnologia</a>
+                <a href="#financeiro" class="hover:text-brand-accent transition-colors">Investimento</a>
+                <a href="#roi" class="hover:text-brand-accent transition-colors">Resultados</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/55279993279906" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-white bg-neutral-900 border border-brand-border px-4 py-2 rounded-lg hover:border-brand-accent transition-all">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Contato Comercial
+                </a>
+                <a href="#contato" class="bg-brand-accent text-black font-extrabold px-5 py-2.5 rounded-lg hover:bg-brand-accentHover hover:scale-[1.02] transition-all text-xs uppercase tracking-wider">
+                    Solicitar Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Visual Identity Inspired by the Flyer) -->
+    <section id="inicio" class="relative py-24 lg:py-32 overflow-hidden border-b border-brand-border bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neutral-900/40 via-brand-bg to-brand-bg">
+        <!-- Tech grid overlay -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-brand-accent/10 text-brand-accent border border-brand-accent/20 uppercase tracking-widest">
+                        🛡️ Segurança Ativa de Alta Performance
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+                        Segurança que <span class="text-brand-accent">protege</span>.<br>
+                        Tecnologia que <span class="underline decoration-brand-accent decoration-4 underline-offset-8">acompanha</span>.
+                    </h1>
+                    <p class="text-base sm:text-lg text-brand-textMuted leading-relaxed max-w-xl">
+                        A PROTEK oferece soluções inteligentes integradas para quem trabalha em altura. Unimos Inteligência Artificial, sensores IoT e visão computacional para garantir proteção completa para cada desafio, em cada detalhe.
+                    </p>
+                    
+                    <!-- Icon Badges matching flyer style (Capacete, Luvas, Colete, Botas, Óculos) -->
+                    <div class="pt-4">
+                        <p class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4">EPIs Monitorados Dinamicamente:</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900 border border-brand-border text-xs font-semibold text-white">
+                                <span class="text-brand-accent">🪖</span> Capacete
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900 border border-brand-border text-xs font-semibold text-white">
+                                <span class="text-brand-accent">🧤</span> Luvas
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900 border border-brand-border text-xs font-semibold text-white">
+                                <span class="text-brand-accent">🦺</span> Colete
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900 border border-brand-border text-xs font-semibold text-white">
+                                <span class="text-brand-accent">🥾</span> Botas
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900 border border-brand-border text-xs font-semibold text-white">
+                                <span class="text-brand-accent">🥽</span> Óculos
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#quem-somos" class="bg-brand-accent text-black font-extrabold px-6 py-3.5 rounded-xl hover:bg-brand-accentHover hover:scale-[1.02] transition-all text-sm uppercase tracking-wider shadow-lg shadow-brand-accent/20">
+                            Nossa História
+                        </a>
+                        <a href="#tecnologia" class="border border-brand-border hover:border-brand-accent text-white font-bold px-6 py-3.5 rounded-xl transition-all text-sm uppercase tracking-wider">
+                            Ver Tecnologia
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right column: Premium Badge Card / Logo presentation -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="bg-brand-card border-2 border-brand-border rounded-3xl p-8 w-full max-w-sm text-center relative shadow-2xl">
+                        <!-- Top neon glow decoration -->
+                        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+                        
+                        <!-- Embedded High Fidelity Replica SVG Logo -->
+                        <div class="bg-neutral-950 p-6 rounded-2xl border border-brand-border/60 mb-6 inline-block">
+                            <svg class="mx-auto w-24 h-24 text-brand-accent" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Stylized Hard Hat -->
+    <path d="M50 15C32 15 22 28 20 40H80C78 28 68 15 50 15Z" fill="#F59E0B"/>
+    <path d="M46 10H54V25H46V10Z" fill="#D97706"/>
+    <!-- Safety Goggles -->
+    <rect x="25" y="44" width="50" height="14" rx="7" fill="#1E293B" stroke="white" stroke-width="3"/>
+    <path d="M30 51H70" stroke="#F59E0B" stroke-width="2"/>
+    <!-- Shield / Collar (V-shape) -->
+    <path d="M20 40C20 60 50 75 50 75C50 75 80 60 80 40H65L50 55L35 40H20Z" fill="#FFFFFF"/>
+    <path d="M50 75C50 75 80 60 80 40H70L50 58V75Z" fill="#F59E0B"/>
+</svg>
+                        </div>
+                        
+                        <h2 class="text-3xl font-black text-white tracking-widest">PRO<span class="text-brand-accent">TEK</span></h2>
+                        <div class="w-16 h-1 bg-brand-accent mx-auto my-3"></div>
+                        <p class="text-[11px] font-bold tracking-widest uppercase text-brand-accent mb-6">Proteção que acompanha cada objetivo</p>
+                        
+                        <!-- Core pillars inside hero box -->
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-950 border border-brand-border">
+                                <span class="text-brand-accent text-lg">🛡️</span>
+                                <div>
+                                    <h4 class="text-xs font-extrabold text-white uppercase">Proteção de Verdade</h4>
+                                    <p class="text-[10px] text-brand-textMuted">Testado e aprovado em tempo integral</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-950 border border-brand-border">
+                                <span class="text-brand-accent text-lg">✨</span>
+                                <div>
+                                    <h4 class="text-xs font-extrabold text-white uppercase">Qualidade Comprovada</h4>
+                                    <p class="text-[10px] text-brand-textMuted">Alta durabilidade e precisão computacional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS (New requested section) -->
+    <section id="quem-somos" class="py-24 border-b border-brand-border bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">A Tradição de Proteger</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white">Quem Somos</h2>
+                    <div class="w-16 h-1 bg-brand-accent"></div>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        A PROTEK nasceu do inconformismo. Ao identificarmos que a segurança no trabalho em altura continuava dependente apenas de fiscalizações manuais e esporádicas, decidimos redefinir o mercado de engenharia de segurança.
+                    </p>
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <p class="italic text-slate-300 text-sm">
+                            "Acreditamos que nenhuma obra é mais importante do que a vida de quem a constrói."
+                        </p>
+                        <span class="block text-xs font-bold text-brand-accent uppercase mt-3">— Equipe Fundadora PROTEK</span>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                        <span class="text-2xl">🌱</span>
+                        <h3 class="text-sm font-extrabold text-white uppercase tracking-wider">Como Surgimos</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            A nossa história se consolidou após vivenciarmos e analisarmos profundamente falhas operacionais e de fiscalização em canteiros de obras. Percebemos que apenas fornecer equipamentos tradicionais era insuficiente: era preciso inteligência ativa para evitar falhas antes que elas acontecessem.
+                        </p>
+                    </div>
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                        <span class="text-2xl">🎯</span>
+                        <h3 class="text-sm font-extrabold text-white uppercase tracking-wider">Nosso Propósito</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Nossa missão é integrar tecnologia de ponta aos processos industriais para garantir que cada profissional retorne para casa em segurança todos os dias, tornando os ambientes de trabalho dinâmicos, humanos e eficientes.
+                        </p>
+                    </div>
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-sm font-extrabold text-white uppercase tracking-wider">Inovação e Rigor</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Combinamos o rigor da engenharia tradicional com o dinamismo da inteligência artificial aplicada à visão computacional, garantindo conformidade absoluta com as normas técnicas.
+                        </p>
+                    </div>
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                        <span class="text-2xl">🤝</span>
+                        <h3 class="text-sm font-extrabold text-white uppercase tracking-wider">Nosso Compromisso</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Oferecemos mais que tecnologia. Entregamos a tranquilidade operacional necessária para que construtoras e indústrias foquem no que realmente importa: crescimento sólido e sustentável.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DADOS & ACIDENTES (New dedicated charts and accidents section) -->
+    <section id="acidentes" class="py-24 border-b border-brand-border bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">Estatísticas Reais e Validadas</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Dados e Análise de Riscos</h2>
+                <p class="mt-4 text-brand-textMuted text-sm">Entenda os números por trás dos acidentes em altura no mundo e por que a intervenção tecnológica imediata se faz tão necessária.</p>
+            </div>
+
+            <!-- Dashboard Mockup/Interface -->
+            <div class="bg-brand-card rounded-3xl border border-brand-border overflow-hidden shadow-2xl">
+                <div class="p-6 bg-neutral-950 border-b border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3.5 h-3.5 rounded-full bg-red-500 animate-ping"></span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-white">Painel Geral de Alertas - Quedas de Altura</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] bg-red-500/10 text-red-400 font-bold px-2 py-1 rounded border border-red-500/20 uppercase">Risco Crítico</span>
+                        <span class="text-[10px] bg-brand-accent/10 text-brand-accent font-bold px-2 py-1 rounded border border-brand-accent/20 uppercase">NR-35 Ativa</span>
+                    </div>
+                </div>
+                
+                <div class="p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Left: Interactive Charts / CSS bar representation -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Principais Causas de Óbito em Altura</h3>
+                        <p class="text-xs text-brand-textMuted">Porcentagem de ocorrências graves decorrentes de falhas na segurança física em obras:</p>
+                        
+                        <div class="space-y-4 pt-2">
+                            <!-- Bar 1 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-neutral-300 mb-1">
+                                    <span>Falta de Ancoragem (Não conectar cinto/talabarte)</span>
+                                    <span class="text-red-500">42%</span>
+                                </div>
+                                <div class="h-4 bg-neutral-900 rounded-full overflow-hidden border border-brand-border">
+                                    <div class="bg-gradient-to-r from-red-600 to-red-500 h-full rounded-full" style="width: 42%"></div>
+                                </div>
+                            </div>
+                            <!-- Bar 2 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-neutral-300 mb-1">
+                                    <span>Não uso de Equipamento Essencial (Capacete/Luvas)</span>
+                                    <span class="text-brand-accent">28%</span>
+                                </div>
+                                <div class="h-4 bg-neutral-900 rounded-full overflow-hidden border border-brand-border">
+                                    <div class="bg-gradient-to-r from-yellow-600 to-brand-accent h-full rounded-full" style="width: 28%"></div>
+                                </div>
+                            </div>
+                            <!-- Bar 3 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-neutral-300 mb-1">
+                                    <span>Ausência de Supervisão Técnica em Tempo Real</span>
+                                    <span class="text-brand-accent">18%</span>
+                                </div>
+                                <div class="h-4 bg-neutral-900 rounded-full overflow-hidden border border-brand-border">
+                                    <div class="bg-gradient-to-r from-yellow-600 to-brand-accent h-full rounded-full" style="width: 18%"></div>
+                                </div>
+                            </div>
+                            <!-- Bar 4 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-neutral-300 mb-1">
+                                    <span>Falha de Equipamento ou Linha de Vida Antiga</span>
+                                    <span class="text-neutral-500">12%</span>
+                                </div>
+                                <div class="h-4 bg-neutral-900 rounded-full overflow-hidden border border-brand-border">
+                                    <div class="bg-neutral-700 h-full rounded-full" style="width: 12%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Key numbers block -->
+                    <div class="lg:col-span-5 bg-neutral-950 p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <h4 class="text-xs font-black uppercase text-brand-accent tracking-widest">Painel Estatístico Global</h4>
+                            <div class="border-b border-brand-border pb-4">
+                                <div class="text-3xl font-black text-white">684.000+</div>
+                                <div class="text-[10px] text-brand-textMuted uppercase font-bold mt-1">Mortes Anuais por Queda de Altura no Mundo</div>
+                            </div>
+                            <div class="border-b border-brand-border pb-4">
+                                <div class="text-2xl font-bold text-red-500">330.000</div>
+                                <div class="text-[10px] text-brand-textMuted uppercase font-bold mt-1">Óbitos Totais de Trabalho (OIT)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-3 bg-brand-accent/5 border border-brand-accent/20 rounded-xl mt-4">
+                            <p class="text-[11px] text-brand-accent leading-relaxed">
+                                💡 <strong>Diagnóstico PROTEK:</strong> 85% dessas mortes poderiam ser evitadas se houvesse detecção eletrônica imediata do não acoplamento do talabarte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECNOLOGIA DA SOLUÇÃO (As explained by Stella) -->
+    <section id="tecnologia" class="py-24 border-b border-brand-border bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">Nosso Diferencial</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Tecnologia Inteligente e Ativa</h2>
+                <p class="mt-4 text-brand-textMuted text-sm">Não esperamos o acidente acontecer para agir. Nossa solução atua de forma preventiva, protegendo vidas e economizando recursos.</p>
+            </div>
+
+            <!-- Video/Graphic mockup with side-by-side details -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-black text-white leading-tight">Como as Câmeras e Sensores Inteligentes Agem</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">
+                        A PROTEK utiliza um ecossistema integrado para realizar o monitoramento completo do canteiro. Com câmeras inteligentes, sensores e algoritmos de Inteligência Artificial próprios, geramos ações imediatas.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-4 bg-brand-card rounded-xl border border-brand-border">
+                            <span class="text-2xl">🖥️</span>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase">Análise de IA de Imagem</h4>
+                                <p class="text-xs text-brand-textMuted mt-1">O sistema identifica se o colaborador está utilizando corretamente os EPIs como capacete, cinturão e talabarte.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-brand-card rounded-xl border border-brand-border">
+                            <span class="text-2xl">⚠️</span>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase">Aviso Instantâneo</h4>
+                                <p class="text-xs text-brand-textMuted mt-1">Se uma inconformidade for identificada, um alerta é enviado imediatamente para o trabalhador e para o responsável da obra.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-brand-card rounded-xl border border-brand-border">
+                            <span class="text-2xl">📊</span>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase">Checklists Digitais e Relatórios</h4>
+                                <p class="text-xs text-brand-textMuted mt-1">A plataforma registra ocorrências e gera relatórios para ajudar as empresas a evoluírem continuamente nas normas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interface simulation matching high tech engineering design -->
+                <div class="bg-neutral-900 border border-brand-border p-6 rounded-3xl relative">
+                    <div class="flex items-center justify-between mb-4 border-b border-brand-border pb-3">
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Câmera de Monitoramento #04</span>
+                        <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold rounded uppercase">Análise de IA</span>
+                    </div>
+                    
+                    <!-- Box of graphic representation -->
+                    <div class="bg-black aspect-video rounded-xl border border-brand-border relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle,_transparent_30%,_rgba(0,0,0,0.8)_100%)]"></div>
+                        <div class="absolute top-4 left-4 text-[10px] font-mono text-brand-accent">REC [00:45:12]</div>
+                        
+                        <!-- AI tracking overlays -->
+                        <div class="absolute border-2 border-brand-accent w-32 h-44 rounded-lg flex flex-col justify-between p-2" style="top: 10%; left: 35%;">
+                            <span class="bg-brand-accent text-black text-[9px] font-bold px-1 rounded uppercase w-fit">Operário Ativo</span>
+                            <span class="bg-emerald-500 text-white text-[9px] font-bold px-1 rounded uppercase w-fit mt-auto">EPI Completo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-center text-[11px]">
+                        <div class="bg-black/50 p-2 rounded-lg border border-brand-border">
+                            <span class="block text-brand-accent font-bold">100%</span>
+                            <span class="text-brand-textMuted">Precisão</span>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-lg border border-brand-border">
+                            <span class="block text-brand-accent font-bold">&lt; 1s</span>
+                            <span class="text-brand-textMuted">Tempo Resposta</span>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-lg border border-brand-border">
+                            <span class="block text-emerald-400 font-bold">Ativo</span>
+                            <span class="text-brand-textMuted">Status</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCEIRO (New dedicated financial planning section) -->
+    <section id="financeiro" class="py-24 border-b border-brand-border bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">Análise de Investimento</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Viabilidade Financeira</h2>
+                <p class="mt-4 text-brand-textMuted text-sm">Estruturação de custos inteligente projetada com precisão para transformar a solução em realidade comercial.</p>
+            </div>
+
+            <!-- Big Number Total Card -->
+            <div class="bg-brand-card border border-brand-border rounded-3xl p-8 mb-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-xs font-bold text-brand-accent uppercase tracking-widest">Investimento Inicial Estimado</h3>
+                    <p class="text-4xl sm:text-5xl font-black text-white mt-2">R$ 450.000,00</p>
+                </div>
+                <div class="text-sm text-brand-textMuted max-w-md">
+                    Montante total distribuído em desenvolvimento técnico e de infraestrutura, garantindo as reservas necessárias para a tração nos primeiros meses de operação comercial.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Tecnologia -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-brand-accent/5 rounded-bl-full"></div>
+                    <div>
+                        <span class="text-brand-accent text-3xl font-extrabold">01</span>
+                        <h4 class="text-sm font-extrabold text-white uppercase tracking-wider mt-4">Tecnologia & IA</h4>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mt-2">Desenvolvimento, testes operacionais e implementação do algoritmo de visão computacional em tempo real.</p>
+                    </div>
+                    <div class="mt-6">
+                        <span class="block text-xs text-brand-textMuted uppercase font-bold">Valor Destinado</span>
+                        <span class="text-lg font-black text-white">R$ 260.000,00</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Infraestrutura -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-brand-accent/5 rounded-bl-full"></div>
+                    <div>
+                        <span class="text-brand-accent text-3xl font-extrabold">02</span>
+                        <h4 class="text-sm font-extrabold text-white uppercase tracking-wider mt-4">Infraestrutura</h4>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mt-2">Aquisição de equipamentos de hardware essenciais, computadores, servidores e montagem física.</p>
+                    </div>
+                    <div class="mt-6">
+                        <span class="block text-xs text-brand-textMuted uppercase font-bold">Valor Destinado</span>
+                        <span class="text-lg font-black text-white">R$ 70.000,00</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Capital de Giro -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-brand-accent/5 rounded-bl-full"></div>
+                    <div>
+                        <span class="text-brand-accent text-3xl font-extrabold">03</span>
+                        <h4 class="text-sm font-extrabold text-white uppercase tracking-wider mt-4">Capital de Giro</h4>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mt-2">Garantia financeira de segurança para manutenção e despesas fixas nos primeiros meses.</p>
+                    </div>
+                    <div class="mt-6">
+                        <span class="block text-xs text-brand-textMuted uppercase font-bold">Valor Destinado</span>
+                        <span class="text-lg font-black text-white">R$ 90.000,00</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Marketing -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-brand-accent/5 rounded-bl-full"></div>
+                    <div>
+                        <span class="text-brand-accent text-3xl font-extrabold">04</span>
+                        <h4 class="text-sm font-extrabold text-white uppercase tracking-wider mt-4">Marketing B2B</h4>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mt-2">Atração de construtoras e canais corporativos corporativos do setor de engenharia civil.</p>
+                    </div>
+                    <div class="mt-6">
+                        <span class="block text-xs text-brand-textMuted uppercase font-bold">Valor Destinado</span>
+                        <span class="text-lg font-black text-white">R$ 30.000,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI / RETORNO SOBRE O INVESTIMENTO -->
+    <section id="roi" class="py-24 border-b border-brand-border bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-neutral-900 to-brand-bg border border-brand-border rounded-3xl p-8 lg:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-brand-accent font-extrabold uppercase text-xs tracking-wider">Aumento de Resultados</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-2 mb-4">Investir em Segurança é Investir em Resultados</h2>
+                        <p class="text-brand-textMuted text-sm leading-relaxed mb-6">
+                            Ao implementar a tecnologia da PROTEK, as construtoras evitam despesas massivas com afastamento de colaboradores, processos judiciais, indenizações pesadas, interdições de obras pela fiscalização e multas das normas vigentes.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="border-l-4 border-brand-accent pl-4">
+                                <div class="text-xl font-bold text-white">Redução de Custos</div>
+                                <p class="text-xs text-brand-textMuted mt-1">Economia real contra custos de acidentes e indenizações civis.</p>
+                            </div>
+                            <div class="border-l-4 border-brand-accent pl-4">
+                                <div class="text-xl font-bold text-white">Alta Produtividade</div>
+                                <p class="text-xs text-brand-textMuted mt-1">Prevenção ativa de paralisação ou embargos técnicos de obras.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-brand-card border border-brand-border p-8 rounded-2xl flex flex-col justify-between h-full">
+                        <blockquote class="text-base italic text-slate-200">
+                            "Prevenir sempre custa infinitamente menos do que lidar com as terríveis consequências de um acidente fatal."
+                        </blockquote>
+                        <div class="mt-6 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-accent text-black flex items-center justify-center font-bold text-sm">
+                                ME
+                            </div>
+                            <div>
+                                <div class="text-sm font-semibold text-white">Matheus Estevão</div>
+                                <div class="text-xs text-brand-textMuted">Relações Comerciais — PROTEK</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form de Contato / Rodapé -->
+    <section id="contato" class="py-20 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto bg-brand-card border border-brand-border rounded-3xl p-8 shadow-2xl">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-white">Fale com a PROTEK</h3>
+                    <p class="text-xs text-brand-textMuted mt-1">Mude as diretrizes de segurança da sua empresa hoje mesmo.</p>
+                </div>
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Obrigado! Entraremos em contato em breve.');">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Nome Completo</label>
+                        <input type="text" class="w-full bg-neutral-950 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-accent transition-all" placeholder="Seu Nome">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">E-mail Corporativo</label>
+                        <input type="email" class="w-full bg-neutral-950 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-accent transition-all" placeholder="empresa@engenharia.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Mensagem</label>
+                        <textarea class="w-full bg-neutral-950 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white h-24 focus:outline-none focus:border-brand-accent transition-all" placeholder="Quero agendar uma demonstração ativa..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-accent text-black font-extrabold py-3 rounded-xl hover:bg-brand-accentHover transition-all uppercase text-xs tracking-widest">
+                        Enviar Solicitação
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matching your physical corporate card details) -->
+    <footer class="border-t border-brand-border py-12 bg-neutral-950 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-brand-textMuted font-bold">
+                <a href="https://instagram.com/protek.seguranca" class="hover:text-brand-accent transition-colors flex items-center gap-1.5">
+                    📸 @protek.seguranca
+                </a>
+                <span class="hidden sm:inline">|</span>
+                <a href="tel:+55279993279906" class="hover:text-brand-accent transition-colors flex items-center gap-1.5">
+                    📞 (27) 99932-79906
+                </a>
+                <span class="hidden sm:inline">|</span>
+                <a href="mailto:contato@protek.com.br" class="hover:text-brand-accent transition-colors flex items-center gap-1.5">
+                    ✉️ contato@protek.com.br
+                </a>
+            </div>
+            
+            <div class="text-brand-textMuted space-y-2 max-w-lg mx-auto">
+                <p>&copy; 2026 PROTEK - Proteção que acompanha cada objetivo. Todos os direitos reservados.</p>
+                <p class="text-[10px]">Apresentação Corporativa para a banca avaliadora Fortes Engenharia.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
